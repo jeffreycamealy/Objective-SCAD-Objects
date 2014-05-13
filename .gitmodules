@@ -1,0 +1,3 @@
+[submodule "Submodules/Objective-SCAD"]
+	path = Submodules/Objective-SCAD
+	url = https://github.com/jeffreycamealy/Objective-SCAD.git

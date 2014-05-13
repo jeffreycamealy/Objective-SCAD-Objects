@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ObjectiveSCAD.h"
+#import "BikeMirror.h"
 
-int main(int argc, const char * argv[])
-{
-
+int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        [ObjectiveSCAD scadObjects:@[[BikeMirror new]]];
     }
     return 0;
 }

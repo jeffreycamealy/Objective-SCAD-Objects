@@ -10,6 +10,24 @@
 		00A5F6D11921A2BF00ECA4C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5F6D01921A2BF00ECA4C1 /* Foundation.framework */; };
 		00A5F6D41921A2BF00ECA4C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6D31921A2BF00ECA4C1 /* main.m */; };
 		00A5F6D81921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00A5F6D71921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 */; };
+		00A5F70A1921A5B100ECA4C1 /* OSCompositeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6E11921A5B100ECA4C1 /* OSCompositeObject.m */; };
+		00A5F70B1921A5B100ECA4C1 /* OSRotationalExtrusion.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6E41921A5B100ECA4C1 /* OSRotationalExtrusion.m */; };
+		00A5F70C1921A5B100ECA4C1 /* ObjectiveSCAD.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6E61921A5B100ECA4C1 /* ObjectiveSCAD.m */; };
+		00A5F70D1921A5B100ECA4C1 /* OSGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6EA1921A5B100ECA4C1 /* OSGeometry.m */; };
+		00A5F70E1921A5B100ECA4C1 /* OSCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6EE1921A5B100ECA4C1 /* OSCircle.m */; };
+		00A5F70F1921A5B100ECA4C1 /* OSCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6F01921A5B100ECA4C1 /* OSCube.m */; };
+		00A5F7101921A5B100ECA4C1 /* OSCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6F21921A5B100ECA4C1 /* OSCylinder.m */; };
+		00A5F7111921A5B100ECA4C1 /* OSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6F41921A5B100ECA4C1 /* OSObject.m */; };
+		00A5F7121921A5B100ECA4C1 /* OSRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6F61921A5B100ECA4C1 /* OSRectangle.m */; };
+		00A5F7131921A5B100ECA4C1 /* OSSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6F81921A5B100ECA4C1 /* OSSphere.m */; };
+		00A5F7141921A5B100ECA4C1 /* OSTaperedCylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6FA1921A5B100ECA4C1 /* OSTaperedCylinder.m */; };
+		00A5F7151921A5B100ECA4C1 /* OSTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6FD1921A5B100ECA4C1 /* OSTransformation.m */; };
+		00A5F7161921A5B100ECA4C1 /* OSVectorTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6FF1921A5B100ECA4C1 /* OSVectorTransformation.m */; };
+		00A5F7171921A5B100ECA4C1 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F7051921A5B100ECA4C1 /* EXTScope.m */; };
+		00A5F7181921A5B100ECA4C1 /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F7091921A5B100ECA4C1 /* VTPG_Common.m */; };
+		00A5F71E1921A70A00ECA4C1 /* BikeMirror.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F71D1921A70A00ECA4C1 /* BikeMirror.m */; };
+		00A5F7211921B9C500ECA4C1 /* OSColorTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F7201921B9C500ECA4C1 /* OSColorTransformation.m */; };
+		00A5F7241921BA8600ECA4C1 /* OSTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F7231921BA8600ECA4C1 /* OSTypes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +49,47 @@
 		00A5F6D31921A2BF00ECA4C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00A5F6D61921A2BF00ECA4C1 /* Objective-SCAD-Objects-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-SCAD-Objects-Prefix.pch"; sourceTree = "<group>"; };
 		00A5F6D71921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Objective_SCAD_Objects.1; sourceTree = "<group>"; };
+		00A5F6E01921A5B100ECA4C1 /* OSCompositeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCompositeObject.h; sourceTree = "<group>"; };
+		00A5F6E11921A5B100ECA4C1 /* OSCompositeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCompositeObject.m; sourceTree = "<group>"; };
+		00A5F6E31921A5B100ECA4C1 /* OSRotationalExtrusion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSRotationalExtrusion.h; sourceTree = "<group>"; };
+		00A5F6E41921A5B100ECA4C1 /* OSRotationalExtrusion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSRotationalExtrusion.m; sourceTree = "<group>"; };
+		00A5F6E51921A5B100ECA4C1 /* ObjectiveSCAD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveSCAD.h; sourceTree = "<group>"; };
+		00A5F6E61921A5B100ECA4C1 /* ObjectiveSCAD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveSCAD.m; sourceTree = "<group>"; };
+		00A5F6E71921A5B100ECA4C1 /* ObjectiveSCADConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveSCADConstants.h; sourceTree = "<group>"; };
+		00A5F6E81921A5B100ECA4C1 /* ObjectiveSCADHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveSCADHeaders.h; sourceTree = "<group>"; };
+		00A5F6E91921A5B100ECA4C1 /* OSGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGeometry.h; sourceTree = "<group>"; };
+		00A5F6EA1921A5B100ECA4C1 /* OSGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSGeometry.m; sourceTree = "<group>"; };
+		00A5F6EC1921A5B100ECA4C1 /* OS2DShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OS2DShape.h; sourceTree = "<group>"; };
+		00A5F6ED1921A5B100ECA4C1 /* OSCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCircle.h; sourceTree = "<group>"; };
+		00A5F6EE1921A5B100ECA4C1 /* OSCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCircle.m; sourceTree = "<group>"; };
+		00A5F6EF1921A5B100ECA4C1 /* OSCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCube.h; sourceTree = "<group>"; };
+		00A5F6F01921A5B100ECA4C1 /* OSCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCube.m; sourceTree = "<group>"; };
+		00A5F6F11921A5B100ECA4C1 /* OSCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCylinder.h; sourceTree = "<group>"; };
+		00A5F6F21921A5B100ECA4C1 /* OSCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCylinder.m; sourceTree = "<group>"; };
+		00A5F6F31921A5B100ECA4C1 /* OSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSObject.h; sourceTree = "<group>"; };
+		00A5F6F41921A5B100ECA4C1 /* OSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSObject.m; sourceTree = "<group>"; };
+		00A5F6F51921A5B100ECA4C1 /* OSRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSRectangle.h; sourceTree = "<group>"; };
+		00A5F6F61921A5B100ECA4C1 /* OSRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSRectangle.m; sourceTree = "<group>"; };
+		00A5F6F71921A5B100ECA4C1 /* OSSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSphere.h; sourceTree = "<group>"; };
+		00A5F6F81921A5B100ECA4C1 /* OSSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSphere.m; sourceTree = "<group>"; };
+		00A5F6F91921A5B100ECA4C1 /* OSTaperedCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTaperedCylinder.h; sourceTree = "<group>"; };
+		00A5F6FA1921A5B100ECA4C1 /* OSTaperedCylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTaperedCylinder.m; sourceTree = "<group>"; };
+		00A5F6FC1921A5B100ECA4C1 /* OSTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTransformation.h; sourceTree = "<group>"; };
+		00A5F6FD1921A5B100ECA4C1 /* OSTransformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTransformation.m; sourceTree = "<group>"; };
+		00A5F6FE1921A5B100ECA4C1 /* OSVectorTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSVectorTransformation.h; sourceTree = "<group>"; };
+		00A5F6FF1921A5B100ECA4C1 /* OSVectorTransformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSVectorTransformation.m; sourceTree = "<group>"; };
+		00A5F7021921A5B100ECA4C1 /* ConvenienceMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvenienceMacros.h; sourceTree = "<group>"; };
+		00A5F7041921A5B100ECA4C1 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		00A5F7051921A5B100ECA4C1 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		00A5F7061921A5B100ECA4C1 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		00A5F7081921A5B100ECA4C1 /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
+		00A5F7091921A5B100ECA4C1 /* VTPG_Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPG_Common.m; sourceTree = "<group>"; };
+		00A5F71C1921A70A00ECA4C1 /* BikeMirror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BikeMirror.h; path = Objects/BikeMirror/BikeMirror.h; sourceTree = "<group>"; };
+		00A5F71D1921A70A00ECA4C1 /* BikeMirror.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BikeMirror.m; path = Objects/BikeMirror/BikeMirror.m; sourceTree = "<group>"; };
+		00A5F71F1921B9C500ECA4C1 /* OSColorTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSColorTransformation.h; sourceTree = "<group>"; };
+		00A5F7201921B9C500ECA4C1 /* OSColorTransformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSColorTransformation.m; sourceTree = "<group>"; };
+		00A5F7221921BA8600ECA4C1 /* OSTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTypes.h; sourceTree = "<group>"; };
+		00A5F7231921BA8600ECA4C1 /* OSTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTypes.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +132,7 @@
 		00A5F6D21921A2BF00ECA4C1 /* Objective-SCAD-Objects */ = {
 			isa = PBXGroup;
 			children = (
-				00A5F6D31921A2BF00ECA4C1 /* main.m */,
-				00A5F6D71921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 */,
+				00A5F7191921A5B800ECA4C1 /* Submodules */,
 				00A5F6D51921A2BF00ECA4C1 /* Supporting Files */,
 			);
 			path = "Objective-SCAD-Objects";
@@ -83,9 +141,148 @@
 		00A5F6D51921A2BF00ECA4C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00A5F6D31921A2BF00ECA4C1 /* main.m */,
+				00A5F6D71921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 */,
 				00A5F6D61921A2BF00ECA4C1 /* Objective-SCAD-Objects-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00A5F6DE1921A5B100ECA4C1 /* Objective-SCAD */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F6DF1921A5B100ECA4C1 /* CompositeObjects */,
+				00A5F6E21921A5B100ECA4C1 /* Extrusions */,
+				00A5F6E51921A5B100ECA4C1 /* ObjectiveSCAD.h */,
+				00A5F6E61921A5B100ECA4C1 /* ObjectiveSCAD.m */,
+				00A5F6E71921A5B100ECA4C1 /* ObjectiveSCADConstants.h */,
+				00A5F6E81921A5B100ECA4C1 /* ObjectiveSCADHeaders.h */,
+				00A5F6E91921A5B100ECA4C1 /* OSGeometry.h */,
+				00A5F6EA1921A5B100ECA4C1 /* OSGeometry.m */,
+				00A5F7221921BA8600ECA4C1 /* OSTypes.h */,
+				00A5F7231921BA8600ECA4C1 /* OSTypes.m */,
+				00A5F6EB1921A5B100ECA4C1 /* Shapes */,
+				00A5F6FB1921A5B100ECA4C1 /* Transformations */,
+				00A5F7001921A5B100ECA4C1 /* Utilities */,
+			);
+			name = "Objective-SCAD";
+			path = "Submodules/Objective-SCAD/Objective-SCAD/Objective-SCAD";
+			sourceTree = SOURCE_ROOT;
+		};
+		00A5F6DF1921A5B100ECA4C1 /* CompositeObjects */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F6E01921A5B100ECA4C1 /* OSCompositeObject.h */,
+				00A5F6E11921A5B100ECA4C1 /* OSCompositeObject.m */,
+			);
+			path = CompositeObjects;
+			sourceTree = "<group>";
+		};
+		00A5F6E21921A5B100ECA4C1 /* Extrusions */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F6E31921A5B100ECA4C1 /* OSRotationalExtrusion.h */,
+				00A5F6E41921A5B100ECA4C1 /* OSRotationalExtrusion.m */,
+			);
+			path = Extrusions;
+			sourceTree = "<group>";
+		};
+		00A5F6EB1921A5B100ECA4C1 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F6EC1921A5B100ECA4C1 /* OS2DShape.h */,
+				00A5F6ED1921A5B100ECA4C1 /* OSCircle.h */,
+				00A5F6EE1921A5B100ECA4C1 /* OSCircle.m */,
+				00A5F6EF1921A5B100ECA4C1 /* OSCube.h */,
+				00A5F6F01921A5B100ECA4C1 /* OSCube.m */,
+				00A5F6F11921A5B100ECA4C1 /* OSCylinder.h */,
+				00A5F6F21921A5B100ECA4C1 /* OSCylinder.m */,
+				00A5F6F31921A5B100ECA4C1 /* OSObject.h */,
+				00A5F6F41921A5B100ECA4C1 /* OSObject.m */,
+				00A5F6F51921A5B100ECA4C1 /* OSRectangle.h */,
+				00A5F6F61921A5B100ECA4C1 /* OSRectangle.m */,
+				00A5F6F71921A5B100ECA4C1 /* OSSphere.h */,
+				00A5F6F81921A5B100ECA4C1 /* OSSphere.m */,
+				00A5F6F91921A5B100ECA4C1 /* OSTaperedCylinder.h */,
+				00A5F6FA1921A5B100ECA4C1 /* OSTaperedCylinder.m */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		00A5F6FB1921A5B100ECA4C1 /* Transformations */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F6FC1921A5B100ECA4C1 /* OSTransformation.h */,
+				00A5F6FD1921A5B100ECA4C1 /* OSTransformation.m */,
+				00A5F6FE1921A5B100ECA4C1 /* OSVectorTransformation.h */,
+				00A5F6FF1921A5B100ECA4C1 /* OSVectorTransformation.m */,
+				00A5F71F1921B9C500ECA4C1 /* OSColorTransformation.h */,
+				00A5F7201921B9C500ECA4C1 /* OSColorTransformation.m */,
+			);
+			path = Transformations;
+			sourceTree = "<group>";
+		};
+		00A5F7001921A5B100ECA4C1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F7011921A5B100ECA4C1 /* ConvenienceMacros */,
+				00A5F7031921A5B100ECA4C1 /* EXTScope */,
+				00A5F7071921A5B100ECA4C1 /* VTPG_Common */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		00A5F7011921A5B100ECA4C1 /* ConvenienceMacros */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F7021921A5B100ECA4C1 /* ConvenienceMacros.h */,
+			);
+			path = ConvenienceMacros;
+			sourceTree = "<group>";
+		};
+		00A5F7031921A5B100ECA4C1 /* EXTScope */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F7041921A5B100ECA4C1 /* EXTScope.h */,
+				00A5F7051921A5B100ECA4C1 /* EXTScope.m */,
+				00A5F7061921A5B100ECA4C1 /* metamacros.h */,
+			);
+			path = EXTScope;
+			sourceTree = "<group>";
+		};
+		00A5F7071921A5B100ECA4C1 /* VTPG_Common */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F7081921A5B100ECA4C1 /* VTPG_Common.h */,
+				00A5F7091921A5B100ECA4C1 /* VTPG_Common.m */,
+			);
+			path = VTPG_Common;
+			sourceTree = "<group>";
+		};
+		00A5F7191921A5B800ECA4C1 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F71A1921A67B00ECA4C1 /* Objects */,
+				00A5F6DE1921A5B100ECA4C1 /* Objective-SCAD */,
+			);
+			name = Submodules;
+			sourceTree = "<group>";
+		};
+		00A5F71A1921A67B00ECA4C1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F71B1921A68000ECA4C1 /* BikeMirror */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		00A5F71B1921A68000ECA4C1 /* BikeMirror */ = {
+			isa = PBXGroup;
+			children = (
+				00A5F71C1921A70A00ECA4C1 /* BikeMirror.h */,
+				00A5F71D1921A70A00ECA4C1 /* BikeMirror.m */,
+			);
+			name = BikeMirror;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +336,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A5F7171921A5B100ECA4C1 /* EXTScope.m in Sources */,
+				00A5F7181921A5B100ECA4C1 /* VTPG_Common.m in Sources */,
+				00A5F70D1921A5B100ECA4C1 /* OSGeometry.m in Sources */,
+				00A5F7241921BA8600ECA4C1 /* OSTypes.m in Sources */,
+				00A5F70F1921A5B100ECA4C1 /* OSCube.m in Sources */,
+				00A5F70C1921A5B100ECA4C1 /* ObjectiveSCAD.m in Sources */,
+				00A5F7101921A5B100ECA4C1 /* OSCylinder.m in Sources */,
+				00A5F70B1921A5B100ECA4C1 /* OSRotationalExtrusion.m in Sources */,
+				00A5F7121921A5B100ECA4C1 /* OSRectangle.m in Sources */,
+				00A5F7131921A5B100ECA4C1 /* OSSphere.m in Sources */,
+				00A5F70E1921A5B100ECA4C1 /* OSCircle.m in Sources */,
+				00A5F70A1921A5B100ECA4C1 /* OSCompositeObject.m in Sources */,
+				00A5F7111921A5B100ECA4C1 /* OSObject.m in Sources */,
 				00A5F6D41921A2BF00ECA4C1 /* main.m in Sources */,
+				00A5F71E1921A70A00ECA4C1 /* BikeMirror.m in Sources */,
+				00A5F7141921A5B100ECA4C1 /* OSTaperedCylinder.m in Sources */,
+				00A5F7151921A5B100ECA4C1 /* OSTransformation.m in Sources */,
+				00A5F7211921B9C500ECA4C1 /* OSColorTransformation.m in Sources */,
+				00A5F7161921A5B100ECA4C1 /* OSVectorTransformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
