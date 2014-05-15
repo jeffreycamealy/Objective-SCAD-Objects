@@ -29,11 +29,12 @@ const float SOCKET_HEIGHT = BALL_JOINT_DIAMETER*(1-SOCKET_BALL_UNDERSIZED_OFFSET
 #pragma mark - Override
 
 - (void)buildSubObjects {
-    OSCompositeObject *halfArmHead = [self halfArmHead];
-    [halfArmHead addTransformation:mirror(1, 0, 0)];
+    OSObject *arm1 = [self fullArm];
+    [arm1.transformations addObject:mirror(0, 0, -1)];
+    [arm1.transformations addObject:translate(0, 0, SOCKET_HEIGHT)];
     
-    [self.subObjects addObject:halfArmHead];
-    [self.subObjects addObject:[self halfArmHead]];
+    [self.subObjects addObject:arm1];
+    [self.subObjects addObject:[self fullArm]];
 }
 
 
@@ -57,6 +58,14 @@ const float SOCKET_HEIGHT = BALL_JOINT_DIAMETER*(1-SOCKET_BALL_UNDERSIZED_OFFSET
     armHead.compositeType = OSCTDifference;
     
     return armHead;
+}
+
+- (OSCompositeObject *)fullArm {
+    OSCompositeObject *halfArmHead = [self halfArmHead];
+    [halfArmHead addTransformation:mirror(1, 0, 0)];
+    
+    OSCompositeObject *fullArm = [[OSCompositeObject alloc] initWithSubObjects:@[halfArmHead, [self halfArmHead]]];
+    return fullArm;
 }
 
 @end
