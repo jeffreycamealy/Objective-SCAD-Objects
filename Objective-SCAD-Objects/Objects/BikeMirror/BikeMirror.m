@@ -30,8 +30,10 @@ const float SOCKET_HEIGHT = BALL_JOINT_DIAMETER*(1-SOCKET_BALL_UNDERSIZED_OFFSET
 
 - (void)buildSubObjects {
     OSCompositeObject *halfArmHead = [self halfArmHead];
-//    halfArmHead addTransformation:mir
+    [halfArmHead addTransformation:mirror(1, 0, 0)];
+    
     [self.subObjects addObject:halfArmHead];
+    [self.subObjects addObject:[self halfArmHead]];
 }
 
 
