@@ -44,18 +44,7 @@ const float MOUNT_CUTOUT_OFFSET = MOUNT_WIDTH*(1.0/4.0);
 #pragma mark - Override
 
 - (void)buildSubObjects {
-    OSObject *mountBlank = [self mountBlank];
-    
-    OSObject *cutout1 = [self mountCutout];
-    [cutout1.transformations addObject:mirror(1, 0, 0)];
-    
-    OSCompositeObject *mount = [[OSCompositeObject alloc] initWithSubObjects:@[mountBlank, cutout1, [self mountCutout]]];
-    mount.compositeType = OSCTDifference;
-    [self.subObjects addObject:mount];
-//    
-//    [self.subObjects addObject:cutout1];
-//    [self.subObjects addObject:[self mountCutout]];
-//    [self.subObjects addObject:mountBlank];
+    [self.subObjects addObject:[self piecesLaidOut]];
 }
 
 
@@ -119,6 +108,32 @@ const float MOUNT_CUTOUT_OFFSET = MOUNT_WIDTH*(1.0/4.0);
     [cutout.transformations addObject:translate(MOUNT_CUTOUT_OFFSET, MOUNT_CUTOUT_LENGTH/2.0, 0)];
     [cutout.transformations addObject:[OSColorTransformation transformationWithColor:redColor()]];
     return cutout;
+}
+
+- (OSObject *)mount {
+    OSObject *mountBlank = [self mountBlank];
+    
+    OSObject *cutout1 = [self mountCutout];
+    [cutout1.transformations addObject:mirror(1, 0, 0)];
+    
+    OSCompositeObject *mount = [[OSCompositeObject alloc] initWithSubObjects:@[mountBlank, cutout1, [self mountCutout]]];
+    mount.compositeType = OSCTDifference;
+    
+    return mount;
+}
+
+- (OSObject *)piecesLaidOut {
+    OSObject *mount = [self mount];
+    [mount.transformations addObject:translate(0, 0, BALL_JOINT_DIAMETER/2.0)];
+    
+    OSObject *arm = [self fullArm];
+    [arm.transformations addObject:translate(0, MOUNT_HEIGHT*(3.0/4.0), SOCKET_HEIGHT)];
+    
+    OSObject *arm2 = [self fullArm];
+    [arm2.transformations addObject:translate(0, MOUNT_HEIGHT*(3.0/4.0)+SOCKET_DIAMETER*1.5, SOCKET_HEIGHT)];
+    
+    OSCompositeObject *pieces = [[OSCompositeObject alloc] initWithSubObjects:@[mount, arm, arm2]];
+    return pieces;
 }
 
 @end
