@@ -9,6 +9,9 @@
 #import "BikeMirror.h"
 #import "ObjectiveSCADHeaders.h"
 
+
+#pragma mark - Measurements
+
 // Main Arm
 const float ARM_LENGTH = 90.0;
 const float ARM_WIDTH = 5.0;
@@ -23,18 +26,36 @@ const float SOCKET_WALL_THICKNESS = 2.0;
 const float SOCKET_DIAMETER = BALL_JOINT_DIAMETER+SOCKET_WALL_THICKNESS;
 const float SOCKET_HEIGHT = BALL_JOINT_DIAMETER*(1-SOCKET_BALL_UNDERSIZED_OFFSET_FACTOR)/2.0+SOCKET_WALL_THICKNESS;
 
+// Mount
+const float MOUNT_HEIGHT = 35.0;
+const float MOUNT_WIDTH = 50;
+const float MOUNT_THICKNESS = 3.0;
+
+// Mount Bracket
+const float MOUNT_BRACKET_LENGTH = 8.0;
+const float MOUNT_BRACKET_WIDTH = 5.0;
+const float MOUNT_CUTOUT_WIDTH = 2.0;
+const float MOUNT_CUTOUT_LENGTH = MOUNT_HEIGHT/2;
+const float MOUNT_CUTOUT_OFFSET = MOUNT_WIDTH*(1.0/4.0);
+
 
 @implementation BikeMirror
 
 #pragma mark - Override
 
 - (void)buildSubObjects {
-    OSObject *arm1 = [self fullArm];
-    [arm1.transformations addObject:mirror(0, 0, -1)];
-    [arm1.transformations addObject:translate(0, 0, SOCKET_HEIGHT)];
+    OSObject *mountBlank = [self mountBlank];
     
-    [self.subObjects addObject:arm1];
-    [self.subObjects addObject:[self fullArm]];
+    OSObject *cutout1 = [self mountCutout];
+    [cutout1.transformations addObject:mirror(1, 0, 0)];
+    
+    OSCompositeObject *mount = [[OSCompositeObject alloc] initWithSubObjects:@[mountBlank, cutout1, [self mountCutout]]];
+    mount.compositeType = OSCTDifference;
+    [self.subObjects addObject:mount];
+//    
+//    [self.subObjects addObject:cutout1];
+//    [self.subObjects addObject:[self mountCutout]];
+//    [self.subObjects addObject:mountBlank];
 }
 
 
@@ -66,6 +87,38 @@ const float SOCKET_HEIGHT = BALL_JOINT_DIAMETER*(1-SOCKET_BALL_UNDERSIZED_OFFSET
     
     OSCompositeObject *fullArm = [[OSCompositeObject alloc] initWithSubObjects:@[halfArmHead, [self halfArmHead]]];
     return fullArm;
+}
+
+- (OSObject *)twoArmsInPlace {
+    OSObject *arm1 = [self fullArm];
+    [arm1.transformations addObject:mirror(0, 0, -1)];
+    [arm1.transformations addObject:translate(0, 0, SOCKET_HEIGHT)];
+    
+    OSCompositeObject *arms = [[OSCompositeObject alloc] initWithSubObjects:@[arm1, [self fullArm]]];
+    return arms;
+}
+
+- (OSObject *)mountBlank {
+    OSCylinder *mount = [[OSCylinder alloc] initWithDiameter:MOUNT_HEIGHT height:MOUNT_THICKNESS];
+    [mount.transformations addObject:scale(MOUNT_WIDTH/MOUNT_HEIGHT, 1, 1)];
+    
+    float curveSlop = BALL_JOINT_DIAMETER/2;
+    OSCube *bracket = [[OSCube alloc] initWithSizeVector:v(MOUNT_BRACKET_WIDTH, MOUNT_BRACKET_LENGTH+curveSlop, MOUNT_THICKNESS)];
+    [bracket.transformations addObject:translate(0, -(MOUNT_HEIGHT/2+MOUNT_BRACKET_LENGTH/2), 0)];
+    
+    OSSphere *ball = [[OSSphere alloc] initWithDiameter:BALL_JOINT_DIAMETER];
+    [ball.transformations addObject:translate(0, -(MOUNT_HEIGHT/2+MOUNT_BRACKET_LENGTH+BALL_JOINT_DIAMETER/2), 0)];
+    
+    
+    OSCompositeObject *armBlank = [[OSCompositeObject alloc] initWithSubObjects:@[mount, bracket, ball]];
+    return armBlank;
+}
+
+- (OSObject *)mountCutout {
+    OSCube *cutout = [[OSCube alloc] initWithSizeVector:v(MOUNT_CUTOUT_WIDTH, MOUNT_CUTOUT_LENGTH, MOUNT_THICKNESS+os_epsilon)];
+    [cutout.transformations addObject:translate(MOUNT_CUTOUT_OFFSET, MOUNT_CUTOUT_LENGTH/2.0, 0)];
+    [cutout.transformations addObject:[OSColorTransformation transformationWithColor:redColor()]];
+    return cutout;
 }
 
 @end
