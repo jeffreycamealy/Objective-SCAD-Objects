@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0094FB5E1963796D006B8DE3 /* LuggageWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0094FB5D1963796D006B8DE3 /* LuggageWheel.swift */; };
 		00A5F6D11921A2BF00ECA4C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A5F6D01921A2BF00ECA4C1 /* Foundation.framework */; };
 		00A5F6D41921A2BF00ECA4C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A5F6D31921A2BF00ECA4C1 /* main.m */; };
 		00A5F6D81921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00A5F6D71921A2BF00ECA4C1 /* Objective_SCAD_Objects.1 */; };
@@ -44,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0094FB5C1963796D006B8DE3 /* Objective-SCAD-Objects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-SCAD-Objects-Bridging-Header.h"; sourceTree = "<group>"; };
+		0094FB5D1963796D006B8DE3 /* LuggageWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuggageWheel.swift; sourceTree = "<group>"; };
 		00A5F6CD1921A2BF00ECA4C1 /* Objective-SCAD-Objects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-SCAD-Objects"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A5F6D01921A2BF00ECA4C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00A5F6D31921A2BF00ECA4C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0094FB5B1963794C006B8DE3 /* LuggageWheel */ = {
+			isa = PBXGroup;
+			children = (
+				0094FB5D1963796D006B8DE3 /* LuggageWheel.swift */,
+				0094FB5C1963796D006B8DE3 /* Objective-SCAD-Objects-Bridging-Header.h */,
+			);
+			name = LuggageWheel;
+			sourceTree = "<group>";
+		};
 		00A5F6C41921A2BF00ECA4C1 = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +144,9 @@
 		00A5F6D21921A2BF00ECA4C1 /* Objective-SCAD-Objects */ = {
 			isa = PBXGroup;
 			children = (
-				00A5F7191921A5B800ECA4C1 /* Submodules */,
 				00A5F6D51921A2BF00ECA4C1 /* Supporting Files */,
+				00A5F71A1921A67B00ECA4C1 /* Objects */,
+				00A5F7191921A5B800ECA4C1 /* Submodules */,
 			);
 			path = "Objective-SCAD-Objects";
 			sourceTree = "<group>";
@@ -262,7 +275,6 @@
 		00A5F7191921A5B800ECA4C1 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				00A5F71A1921A67B00ECA4C1 /* Objects */,
 				00A5F6DE1921A5B100ECA4C1 /* Objective-SCAD */,
 			);
 			name = Submodules;
@@ -271,6 +283,7 @@
 		00A5F71A1921A67B00ECA4C1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				0094FB5B1963794C006B8DE3 /* LuggageWheel */,
 				00A5F71B1921A68000ECA4C1 /* BikeMirror */,
 			);
 			name = Objects;
@@ -338,6 +351,7 @@
 			files = (
 				00A5F7171921A5B100ECA4C1 /* EXTScope.m in Sources */,
 				00A5F7181921A5B100ECA4C1 /* VTPG_Common.m in Sources */,
+				0094FB5E1963796D006B8DE3 /* LuggageWheel.swift in Sources */,
 				00A5F70D1921A5B100ECA4C1 /* OSGeometry.m in Sources */,
 				00A5F7241921BA8600ECA4C1 /* OSTypes.m in Sources */,
 				00A5F70F1921A5B100ECA4C1 /* OSCube.m in Sources */,
@@ -434,18 +448,25 @@
 		00A5F6DC1921A2BF00ECA4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Objective-SCAD-Objects/Objective-SCAD-Objects-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective-SCAD-Objects/Objective-SCAD-Objects-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		00A5F6DD1921A2BF00ECA4C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Objective-SCAD-Objects/Objective-SCAD-Objects-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objective-SCAD-Objects/Objective-SCAD-Objects-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -468,6 +489,7 @@
 				00A5F6DD1921A2BF00ECA4C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "ObjectiveSCAD.h"
 #import "BikeMirror.h"
+#import "Objective_SCAD_Objects-Swift.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [ObjectiveSCAD scadObjects:@[[BikeMirror new]]];
+        [ObjectiveSCAD scadObjects:@[[LuggageWheel new]]];
+//        [ObjectiveSCAD scadObjects:@[[BikeMirror new]]];
     }
     return 0;
 }
